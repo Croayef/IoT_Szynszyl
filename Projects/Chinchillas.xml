@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b535"
+ majorVersion="8"
+ minorVersion="3"
+ modelPersistenceProviderPackage="H2PersistenceProviderPackage"
+ revision="2"
+ schemaVersion="1030"
+ universal="">
+    <Projects>
+        <Project
+         dependsOn=""
+         description="Pan da 5"
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-01-27T16:27:19.994+01:00"
+         name="Chinchillas"
+         packageVersion="1.0.0"
+         projectName="Chinchillas"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Project>
+    </Projects>
+</Entities>
