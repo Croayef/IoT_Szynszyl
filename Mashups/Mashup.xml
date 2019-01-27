@@ -15,7 +15,7 @@
          description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-01-27T11:52:56.606-08:00"
+         lastModifiedDate="2019-01-27T13:37:44.241-08:00"
          name="Mashup"
          projectName="Chinchillas"
          rows="0.0"
@@ -91,11 +91,11 @@
                   "Services" : [ {
                     "APIMethod" : "post",
                     "Characteristic" : "Services",
-                    "Id" : "54e05bd6-a701-46ea-90fa-41da14ee97a3",
-                    "Name" : "GetImplementingThings",
+                    "Id" : "9180bbc0-b885-41d9-94de-c5e69b980785",
+                    "Name" : "GetImplementingThingsWithData",
                     "Parameters" : { },
                     "RefreshInterval" : 0,
-                    "Target" : "GetImplementingThings"
+                    "Target" : "GetImplementingThingsWithData"
                   } ]
                 },
                 "UserExtensions" : {
@@ -115,39 +115,6 @@
                 }
               },
               "DataBindings" : [ {
-                "Id" : "36cb4fda-2327-4e38-8a5a-993d5f226d26",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "",
-                  "SourcePropertyBaseType" : "INFOTABLE",
-                  "SourcePropertyType" : "InfoTable",
-                  "TargetProperty" : "Data",
-                  "TargetPropertyBaseType" : "INFOTABLE",
-                  "TargetPropertyType" : "property"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "AllData",
-                "SourceId" : "GetImplementingThings",
-                "SourceSection" : "ThingTemplates_CageTemplate",
-                "TargetArea" : "UI",
-                "TargetId" : "dhxlist-6",
-                "TargetSection" : ""
-              }, {
-                "Id" : "f1ba686e-b186-4cb7-ba67-bc4a14cb0ef7",
-                "PropertyMaps" : [ {
-                  "SourceProperty" : "name",
-                  "SourcePropertyBaseType" : "STRING",
-                  "TargetProperty" : "value",
-                  "TargetPropertyBaseType" : "THINGNAME",
-                  "TargetPropertyType" : "Entity"
-                } ],
-                "SourceArea" : "Data",
-                "SourceDetails" : "SelectedRows",
-                "SourceId" : "GetImplementingThings",
-                "SourceSection" : "ThingTemplates_CageTemplate",
-                "TargetArea" : "Data",
-                "TargetId" : "EntityName",
-                "TargetSection" : "DynamicThingTemplates_CageTemplate"
-              }, {
                 "Id" : "6618e1fd-397c-4f97-b16e-0da6ffd6db6a",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Temperature",
@@ -243,6 +210,69 @@
                 "TargetArea" : "Data",
                 "TargetId" : "AddParameters",
                 "TargetSection" : "DynamicThingTemplates_CageTemplate"
+              }, {
+                "Id" : "c9eee6e4-cd8c-4331-acf7-2dd6e8ad86d9",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetImplementingThingsWithData",
+                "SourceSection" : "ThingTemplates_CageTemplate",
+                "TargetArea" : "UI",
+                "TargetId" : "dhxgrid-16",
+                "TargetSection" : ""
+              }, {
+                "Id" : "f79e6a9a-429b-4821-ae4d-ced05e0ab6cb",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "value",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "Entity"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetImplementingThingsWithData",
+                "SourceSection" : "ThingTemplates_CageTemplate",
+                "TargetArea" : "Data",
+                "TargetId" : "EntityName",
+                "TargetSection" : "DynamicThingTemplates_CageTemplate"
+              }, {
+                "Id" : "49c42aff-c1a1-47c1-9cf2-e25fa5adfde5",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "Water",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "textbox-10",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddParameters",
+                "TargetSection" : "DynamicThingTemplates_CageTemplate"
+              }, {
+                "Id" : "dee901b4-777a-4339-8d12-bcd8dbabea56",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "State",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "TargetProperty" : "Food",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "checkbox-23",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "AddParameters",
+                "TargetSection" : "DynamicThingTemplates_CageTemplate"
               } ],
               "DesignTimePermissions" : {
                 "Create" : [ ],
@@ -253,24 +283,6 @@
               },
               "Events" : [ {
                 "EventHandlerArea" : "Data",
-                "EventHandlerId" : "ThingTemplates_CageTemplate",
-                "EventHandlerService" : "GetImplementingThings",
-                "EventTriggerArea" : "Mashup",
-                "EventTriggerEvent" : "Loaded",
-                "EventTriggerId" : "mashup-root",
-                "EventTriggerSection" : "",
-                "Id" : "682068f9-bbce-4c51-8825-89225f30cc16"
-              }, {
-                "EventHandlerArea" : "Data",
-                "EventHandlerId" : "DynamicThingTemplates_CageTemplate",
-                "EventHandlerService" : "CageService",
-                "EventTriggerArea" : "Data",
-                "EventTriggerEvent" : "ServiceInvokeCompleted",
-                "EventTriggerId" : "GetImplementingThings",
-                "EventTriggerSection" : "ThingTemplates_CageTemplate",
-                "Id" : "8e3dc77e-5d3a-4a0f-822e-60989cde1800"
-              }, {
-                "EventHandlerArea" : "Data",
                 "EventHandlerId" : "DynamicThingTemplates_CageTemplate",
                 "EventHandlerService" : "AddParameters",
                 "EventTriggerArea" : "UI",
@@ -280,13 +292,40 @@
                 "Id" : "535666cf-5ff8-4ec9-b4e2-100cd4eb9489"
               }, {
                 "EventHandlerArea" : "Data",
+                "EventHandlerId" : "ThingTemplates_CageTemplate",
+                "EventHandlerService" : "GetImplementingThingsWithData",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "e17ab919-9412-4752-9c00-73c10721bc2d"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_CageTemplate",
+                "EventHandlerService" : "CageService",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "GetImplementingThingsWithData",
+                "EventTriggerSection" : "ThingTemplates_CageTemplate",
+                "Id" : "7d35bc5c-bda8-4d96-a718-d39028aa7699"
+              }, {
+                "EventHandlerArea" : "Data",
                 "EventHandlerId" : "DynamicThingTemplates_CageTemplate",
                 "EventHandlerService" : "CageService",
                 "EventTriggerArea" : "Data",
                 "EventTriggerEvent" : "SelectedRowsChanged",
-                "EventTriggerId" : "GetImplementingThings",
+                "EventTriggerId" : "GetImplementingThingsWithData",
                 "EventTriggerSection" : "ThingTemplates_CageTemplate",
-                "Id" : "24265659-1969-47a9-b24f-beab8d5447e6"
+                "Id" : "a3f51440-b2d3-41a7-9b55-e51c559d4b76"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "ThingTemplates_CageTemplate",
+                "EventHandlerService" : "GetImplementingThingsWithData",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Refresh",
+                "EventTriggerId" : "autorefresh-22",
+                "EventTriggerSection" : "",
+                "Id" : "a0b4c310-0707-41ff-8d76-6acacc5c9b5f"
               } ],
               "RunTimePermissions" : {
                 "permissions" : [ ]
@@ -323,7 +362,7 @@
                   "Width" : 1024,
                   "Z-index" : 10,
                   "__TypeDisplayName" : "Mashup",
-                  "id_index" : 13,
+                  "id_index" : 23,
                   "supportsAutoResize" : true
                 },
                 "Widgets" : [ {
@@ -339,12 +378,12 @@
                     "IncludeSpacingInFixedAreas" : false,
                     "IsPrintLayout" : false,
                     "Left" : 100,
-                    "LeftSidebar" : true,
-                    "LeftSidebarWidth" : 100,
-                    "Orientation" : "horizontal",
+                    "LeftSidebar" : false,
+                    "LeftSidebarWidth" : 0,
+                    "Orientation" : "vertical",
                     "PctColumn1" : 50,
                     "PctColumn2" : 50,
-                    "PctColumn3" : 1,
+                    "PctColumn3" : 50,
                     "PctColumn4" : 1,
                     "PctColumn5" : 1,
                     "PctColumn6" : 1,
@@ -352,7 +391,7 @@
                     "PctColumn8" : 1,
                     "PctRow1" : 50,
                     "PctRow2" : 50,
-                    "PctRow3" : 0,
+                    "PctRow3" : 50,
                     "PctRow4" : 0,
                     "PctRow5" : 0,
                     "PctRow6" : 0,
@@ -364,7 +403,7 @@
                     "ResponsiveLayout" : true,
                     "RightSidebar" : false,
                     "RightSidebarWidth" : 0,
-                    "Rows" : 0,
+                    "Rows" : 2,
                     "ShowDataLoading" : true,
                     "Spacing" : 2,
                     "Top" : 5,
@@ -379,10 +418,10 @@
                       "Area" : "UI",
                       "BGImageRepeat" : "no-repeat",
                       "BGImageSize" : "auto",
-                      "DisplayName" : "Left Sidebar",
+                      "DisplayName" : "Row",
                       "ExpandCollapseTabLocation" : "outside",
                       "Expanded" : true,
-                      "Id" : "container-3",
+                      "Id" : "container-18",
                       "MinHeight" : 0,
                       "MinWidth" : 0,
                       "Overlay" : false,
@@ -404,55 +443,146 @@
                     },
                     "Widgets" : [ {
                       "Properties" : {
-                        "Alignment" : "left",
+                        "AlignHeader" : false,
                         "Area" : "UI",
                         "AutoSelectFirstRow" : false,
-                        "ClearIfNoSelection" : false,
-                        "ComboDropdownButtonStyle" : "DefaultComboDropdownButtonStyle",
-                        "ComboEnableCheckbox" : false,
-                        "ComboItemHighlightedStyle" : "DefaultComboItemHighlightedStyle",
-                        "ComboTextboxStyle" : "DefaultComboTextboxStyle",
-                        "DisableSelectedStyle" : false,
-                        "DisplayField" : "name",
-                        "DisplayName" : "dhxlist-6",
-                        "DropdownButtonStyle" : "DefaultDropdownButtonStyle",
-                        "DropdownSelectedStyle" : "DefaultDropdownSelectedStyle",
-                        "DropdownStyle" : "DefaultDropdownStyle",
-                        "EnableKeyboardSelections" : true,
-                        "Height" : 170,
-                        "HeightOfDropdownView" : 170,
-                        "Id" : "dhxlist-6",
-                        "Label" : "",
-                        "LabelAlignment" : "left",
-                        "Left" : 85,
-                        "ListBackgroundStyle" : "DefaultListBackgroundStyle",
-                        "ListFocusStyle" : "DefaultFocusStyle",
-                        "ListItemAlternateStyle" : "DefaultListItemAlternateStyle",
-                        "ListItemHoverStyle" : "DefaultListItemHoverStyle",
-                        "ListItemSelectedStyle" : "DefaultListItemSelectedStyle",
-                        "ListItemStyle" : "DefaultListItemStyle",
-                        "ListLabelStyle" : "DefaultWidgetLabelStyle",
+                        "CellTextWrapping" : false,
+                        "ColumnFormat" : {
+                          "formatInfo" : [ {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "FieldName" : "name",
+                            "FormatOptions" : {
+                              "FormatString" : "full",
+                              "formatInfo" : {
+                                "FieldName" : "",
+                                "StateDefinition" : "",
+                                "StateDefinitionType" : "fixed",
+                                "StateFormats" : [ {
+                                  "state" : "",
+                                  "stateName" : "fixed"
+                                } ]
+                              },
+                              "renderer" : "STRING",
+                              "roundingEnabled" : true
+                            },
+                            "Title" : "Cage",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          }, {
+                            "Align" : "right",
+                            "AllowEdit" : false,
+                            "FieldName" : "Humidity",
+                            "FormatOptions" : {
+                              "FormatString" : "0.00",
+                              "renderer" : "NUMBER"
+                            },
+                            "Title" : "Humidity",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          }, {
+                            "Align" : "right",
+                            "AllowEdit" : false,
+                            "FieldName" : "Temperature",
+                            "FormatOptions" : {
+                              "FormatString" : "0.00",
+                              "renderer" : "NUMBER"
+                            },
+                            "Title" : "Temperature",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          }, {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "FieldName" : "Water",
+                            "FormatOptions" : {
+                              "FormatString" : "checkbox",
+                              "renderer" : "BOOLEAN"
+                            },
+                            "Title" : "Water",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          }, {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "FieldName" : "Clean",
+                            "FormatOptions" : {
+                              "FormatString" : "checkbox",
+                              "formatInfo" : {
+                                "FieldName" : "",
+                                "StateDefinition" : "",
+                                "StateDefinitionType" : "fixed",
+                                "StateFormats" : [ {
+                                  "state" : "",
+                                  "stateName" : "fixed"
+                                } ]
+                              },
+                              "renderer" : "BOOLEAN",
+                              "roundingEnabled" : true
+                            },
+                            "Title" : "Clean",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          }, {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "FieldName" : "Food",
+                            "FormatOptions" : {
+                              "FormatString" : "checkbox",
+                              "formatInfo" : {
+                                "FieldName" : "",
+                                "StateDefinition" : "",
+                                "StateDefinitionType" : "fixed",
+                                "StateFormats" : [ {
+                                  "state" : "",
+                                  "stateName" : "fixed"
+                                } ]
+                              },
+                              "renderer" : "BOOLEAN",
+                              "roundingEnabled" : true
+                            },
+                            "Title" : "Food",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          } ]
+                        },
+                        "CurrentScrollTop" : 0,
+                        "DisplayName" : "dhxgrid-16",
+                        "FocusStyle" : "DefaultFocusStyle",
+                        "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                        "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                        "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                        "GridHeaderTextCase" : "capitalize",
+                        "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                        "Height" : 200,
+                        "Id" : "dhxgrid-16",
+                        "IsEditable" : false,
+                        "IsPrintLayout" : false,
+                        "Left" : 5,
                         "MultiSelect" : false,
-                        "NumberOfItemsInDropdownView" : 6,
                         "ResponsiveLayout" : true,
-                        "RowHeight" : 28,
+                        "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                        "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                        "RowFormat_StateParameters" : [ ],
+                        "RowHeight" : 30,
+                        "RowHoverStyle" : "DefaultRowHoverStyle",
+                        "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                        "ScrollTop" : 0,
+                        "ShowAllColumns" : false,
                         "ShowDataLoading" : true,
-                        "SingleClickSelectOnTablets" : false,
-                        "TabSequence" : -1,
-                        "TextIfNoSelectionType" : "editable",
-                        "TextVerticalAlignment" : 28,
-                        "ToolTipStyle" : "DefaultTooltipStyle",
+                        "TabSequence" : 0,
                         "Top" : 10,
-                        "Type" : "dhxlist",
-                        "ValueField" : "name",
-                        "View" : "list",
+                        "Type" : "dhxgrid",
                         "Visible" : true,
-                        "Width" : 110,
-                        "WidthOfDropdownView" : 110,
+                        "Width" : 400,
                         "Z-index" : 10,
-                        "__TypeDisplayName" : "List",
-                        "__supportsLabel" : true,
-                        "__supportsTooltip" : true
+                        "__TypeDisplayName" : "Grid"
                       },
                       "Widgets" : [ ]
                     } ]
@@ -514,9 +644,9 @@
                           "Height" : 24,
                           "Id" : "textbox-8",
                           "InnerShadow" : true,
-                          "Label" : "",
+                          "Label" : "Temperature",
                           "LabelAlignment" : "left",
-                          "Left" : 15,
+                          "Left" : 100,
                           "MaskInputCharacters" : false,
                           "PlaceholderText" : "",
                           "ReadOnly" : false,
@@ -529,10 +659,10 @@
                           "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
                           "ToolTipField" : "",
                           "ToolTipStyle" : "DefaultTooltipStyle",
-                          "Top" : 30,
+                          "Top" : 95,
                           "Type" : "textbox",
                           "Visible" : true,
-                          "Width" : 200,
+                          "Width" : 75,
                           "Z-index" : 10,
                           "__TypeDisplayName" : "TextBox",
                           "__supportsLabel" : true,
@@ -545,12 +675,12 @@
                           "CursorPosition" : 0,
                           "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
                           "DisplayName" : "textbox-9",
-                          "Height" : 24,
+                          "Height" : 19,
                           "Id" : "textbox-9",
                           "InnerShadow" : true,
-                          "Label" : "",
+                          "Label" : "Humidity",
                           "LabelAlignment" : "left",
-                          "Left" : 15,
+                          "Left" : 5,
                           "MaskInputCharacters" : false,
                           "PlaceholderText" : "",
                           "ReadOnly" : false,
@@ -563,10 +693,10 @@
                           "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
                           "ToolTipField" : "",
                           "ToolTipStyle" : "DefaultTooltipStyle",
-                          "Top" : 80,
+                          "Top" : 95,
                           "Type" : "textbox",
                           "Visible" : true,
-                          "Width" : 200,
+                          "Width" : 95,
                           "Z-index" : 10,
                           "__TypeDisplayName" : "TextBox",
                           "__supportsLabel" : true,
@@ -582,9 +712,9 @@
                           "Height" : 24,
                           "Id" : "textbox-10",
                           "InnerShadow" : true,
-                          "Label" : "",
+                          "Label" : "Water",
                           "LabelAlignment" : "left",
-                          "Left" : 10,
+                          "Left" : 180,
                           "MaskInputCharacters" : false,
                           "PlaceholderText" : "",
                           "ReadOnly" : false,
@@ -597,10 +727,10 @@
                           "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
                           "ToolTipField" : "",
                           "ToolTipStyle" : "DefaultTooltipStyle",
-                          "Top" : 125,
+                          "Top" : 95,
                           "Type" : "textbox",
                           "Visible" : true,
-                          "Width" : 200,
+                          "Width" : 85,
                           "Z-index" : 10,
                           "__TypeDisplayName" : "TextBox",
                           "__supportsLabel" : true,
@@ -628,7 +758,7 @@
                           "IconAlignment" : "left",
                           "Id" : "button-11",
                           "Label" : "Save",
-                          "Left" : 155,
+                          "Left" : 0.111114501953125,
                           "ResponsiveLayout" : false,
                           "RoundedCorners" : true,
                           "ShowDataLoading" : true,
@@ -636,7 +766,7 @@
                           "TabSequence" : 0,
                           "ToolTipField" : "",
                           "ToolTipStyle" : "DefaultTooltipStyle",
-                          "Top" : 175,
+                          "Top" : 170.11111450195312,
                           "Type" : "button",
                           "Visible" : true,
                           "Width" : 75,
@@ -648,13 +778,15 @@
                       }, {
                         "Properties" : {
                           "Area" : "UI",
+                          "CustomClass" : "",
+                          "Description" : "",
                           "Disabled" : false,
                           "DisplayName" : "checkbox-12",
                           "FocusStyle" : "DefaultFocusStyle",
                           "Height" : 20,
                           "Id" : "checkbox-12",
-                          "Left" : 70,
-                          "Prompt" : "Check this box",
+                          "Left" : 180.11111450195312,
+                          "Prompt" : "Clean",
                           "ResponsiveLayout" : false,
                           "ShowDataLoading" : true,
                           "State" : false,
@@ -662,7 +794,68 @@
                           "TabSequence" : 0,
                           "ToolTipField" : "",
                           "ToolTipStyle" : "DefaultTooltipStyle",
-                          "Top" : 265,
+                          "Top" : 150.11111450195312,
+                          "Type" : "checkbox",
+                          "Visible" : true,
+                          "Width" : 120,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Checkbox",
+                          "__supportsTooltip" : true
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "ActiveStyle" : "DefaultButtonActiveStyle",
+                          "Area" : "UI",
+                          "AutoRefresh" : true,
+                          "AutoRefreshTabSequence" : 0,
+                          "DisplayName" : "autorefresh-22",
+                          "FocusStyle" : "DefaultButtonFocusStyle",
+                          "Height" : 28,
+                          "HoverStyle" : "DefaultButtonHoverStyle",
+                          "IconAlignment" : "left",
+                          "Id" : "autorefresh-22",
+                          "Label" : "Refresh Now",
+                          "Left" : 10,
+                          "RefreshInterval" : 30,
+                          "RefreshNowTabSequence" : 0,
+                          "RefreshToggleLabel" : "On",
+                          "RefreshToggleLabelOff" : "Off",
+                          "RefreshToggleSliderStyle" : "DefaultAutoRefreshToggleSliderStyle",
+                          "RefreshToggleStyle" : "DefaultAutoRefreshToggleStyle",
+                          "RefreshToggleStyleOff" : "DefaultAutoRefreshToggleOffStyle",
+                          "ResponsiveLayout" : false,
+                          "ShowControls" : true,
+                          "ShowDataLoading" : true,
+                          "Style" : "DefaultButtonStyle",
+                          "Top" : 10,
+                          "Type" : "autorefresh",
+                          "Visible" : true,
+                          "Width" : 180,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Auto Refresh"
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Area" : "UI",
+                          "CustomClass" : "",
+                          "Description" : "",
+                          "Disabled" : false,
+                          "DisplayName" : "checkbox-23",
+                          "FocusStyle" : "DefaultFocusStyle",
+                          "Height" : 20,
+                          "Id" : "checkbox-23",
+                          "Left" : 180.11111450195312,
+                          "Prompt" : "Food",
+                          "ResponsiveLayout" : false,
+                          "ShowDataLoading" : true,
+                          "State" : false,
+                          "Style" : "DefaultCheckboxStyle",
+                          "TabSequence" : 0,
+                          "ToolTipField" : "",
+                          "ToolTipStyle" : "DefaultTooltipStyle",
+                          "Top" : 175.11111450195312,
                           "Type" : "checkbox",
                           "Visible" : true,
                           "Width" : 120,
@@ -673,36 +866,6 @@
                         "Widgets" : [ ]
                       } ]
                     } ]
-                  }, {
-                    "Properties" : {
-                      "AnimateExpandCollapse" : true,
-                      "Area" : "UI",
-                      "BGImageRepeat" : "no-repeat",
-                      "BGImageSize" : "auto",
-                      "DisplayName" : "Column 2",
-                      "ExpandCollapseTabLocation" : "outside",
-                      "Expanded" : true,
-                      "Id" : "container-5",
-                      "MinHeight" : 0,
-                      "MinWidth" : 0,
-                      "Overlay" : false,
-                      "OverlayIsTransparent" : false,
-                      "ResponsiveLayout" : true,
-                      "ShowDataLoading" : true,
-                      "ShowExpandCollapseTab" : false,
-                      "Style" : "DefaultContainerStyle",
-                      "TabCollapseStyle" : "DefaultTabCollapseStyle",
-                      "TabExpandStyle" : "DefaultTabExpandStyle",
-                      "TabHeight" : 36,
-                      "TabLocation" : "center",
-                      "TabOffset" : 0,
-                      "TabWidth" : 36,
-                      "Type" : "container",
-                      "Visible" : true,
-                      "Z-index" : 10,
-                      "__TypeDisplayName" : "Container"
-                    },
-                    "Widgets" : [ ]
                   } ]
                 } ]
               },
