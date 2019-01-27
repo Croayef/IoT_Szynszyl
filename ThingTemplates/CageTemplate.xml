@@ -9,12 +9,12 @@
  universal="">
     <ThingTemplates>
         <ThingTemplate
-         baseThingTemplate="GenericThing"
+         baseThingTemplate="RemoteThing"
          description=""
          documentationContent=""
-         effectiveThingPackage="ConfiguredThing"
+         effectiveThingPackage="RemoteThing"
          homeMashup=""
-         lastModifiedDate="2019-01-27T23:42:04.696+01:00"
+         lastModifiedDate="2019-01-28T00:37:08.341+01:00"
          name="CageTemplate"
          projectName="Chinchillas"
          tags="Chinchillas:Cage"
@@ -35,7 +35,38 @@
             <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
             <ConfigurationTables></ConfigurationTables>
             <PropertyBindings></PropertyBindings>
-            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemotePropertyBindings>
+                <RemotePropertyBinding
+                 aspect.source=""
+                 aspect.startType="useDefaultValue"
+                 aspect.tagAddress=""
+                 foldType="NONE"
+                 name="Clean"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName="Clean"
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.source=""
+                 aspect.startType="useDefaultValue"
+                 aspect.tagAddress=""
+                 foldType="NONE"
+                 name="Food"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName="Food"
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.source=""
+                 aspect.startType="useDefaultValue"
+                 aspect.tagAddress=""
+                 foldType="NONE"
+                 name="Water"
+                 pushThreshold="0.0"
+                 pushType="VALUE"
+                 sourceName="Water"
+                 timeout="0"></RemotePropertyBinding>
+            </RemotePropertyBindings>
             <RemoteServiceBindings></RemoteServiceBindings>
             <RemoteEventBindings></RemoteEventBindings>
             <AlertConfigurations>
@@ -53,6 +84,7 @@
             <ThingShape>
                 <PropertyDefinitions>
                     <PropertyDefinition
+                     aspect.cacheTime="0.0"
                      aspect.dataChangeType="VALUE"
                      aspect.defaultValue="3000.0"
                      aspect.isLogged="true"
@@ -66,6 +98,7 @@
                      name="Water"
                      ordinal="4"></PropertyDefinition>
                     <PropertyDefinition
+                     aspect.cacheTime="0.0"
                      aspect.dataChangeType="VALUE"
                      aspect.isLogged="true"
                      aspect.maximumValue="30.0"
@@ -78,6 +111,7 @@
                      name="Temperature"
                      ordinal="3"></PropertyDefinition>
                     <PropertyDefinition
+                     aspect.cacheTime="0.0"
                      aspect.dataChangeType="VALUE"
                      aspect.isLogged="true"
                      aspect.maximumValue="100.0"
@@ -90,6 +124,7 @@
                      name="Humidity"
                      ordinal="6"></PropertyDefinition>
                     <PropertyDefinition
+                     aspect.cacheTime="0.0"
                      aspect.dataChangeType="VALUE"
                      aspect.defaultValue="true"
                      aspect.isLogged="true"
@@ -100,6 +135,7 @@
                      name="Clean"
                      ordinal="2"></PropertyDefinition>
                     <PropertyDefinition
+                     aspect.cacheTime="0.0"
                      aspect.dataChangeType="VALUE"
                      aspect.defaultValue="2000.0"
                      aspect.isLogged="true"
@@ -135,7 +171,10 @@
                              name="Clean"
                              ordinal="5"></FieldDefinition>
                             <FieldDefinition
-                             baseType="BOOLEAN"
+                             aspect.maximumValue="10000.0"
+                             aspect.minimumValue="0.0"
+                             aspect.units="g"
+                             baseType="NUMBER"
                              description=""
                              name="Food"
                              ordinal="2"></FieldDefinition>
@@ -156,7 +195,10 @@
                              name="Temperature"
                              ordinal="4"></FieldDefinition>
                             <FieldDefinition
-                             baseType="BOOLEAN"
+                             aspect.maximumValue="5000.0"
+                             aspect.minimumValue="0.0"
+                             aspect.units="ml"
+                             baseType="NUMBER"
                              description=""
                              name="Water"
                              ordinal="1"></FieldDefinition>
