@@ -15,7 +15,7 @@
          description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-01-27T13:37:44.241-08:00"
+         lastModifiedDate="2019-01-27T13:47:18.403-08:00"
          name="Mashup"
          projectName="Chinchillas"
          rows="0.0"
@@ -499,8 +499,18 @@
                             "AllowEdit" : false,
                             "FieldName" : "Water",
                             "FormatOptions" : {
-                              "FormatString" : "checkbox",
-                              "renderer" : "BOOLEAN"
+                              "FormatString" : "0.00",
+                              "formatInfo" : {
+                                "FieldName" : "",
+                                "StateDefinition" : "",
+                                "StateDefinitionType" : "fixed",
+                                "StateFormats" : [ {
+                                  "state" : "",
+                                  "stateName" : "fixed"
+                                } ]
+                              },
+                              "renderer" : "NUMBER",
+                              "roundingEnabled" : true
                             },
                             "Title" : "Water",
                             "ValidationExpression" : "",
