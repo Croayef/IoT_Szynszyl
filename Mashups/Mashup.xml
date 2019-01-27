@@ -15,11 +15,11 @@
          description=""
          documentationContent=""
          homeMashup=""
-         lastModifiedDate="2019-01-27T13:47:18.403-08:00"
+         lastModifiedDate="2019-01-27T15:01:44.693-08:00"
          name="Mashup"
          projectName="Chinchillas"
          rows="0.0"
-         tags="">
+         tags="Chinchillas:Cage">
             <avatar></avatar>
             <DesignTimePermissions>
                 <Create></Create>
@@ -244,12 +244,46 @@
                 "TargetId" : "EntityName",
                 "TargetSection" : "DynamicThingTemplates_CageTemplate"
               }, {
-                "Id" : "49c42aff-c1a1-47c1-9cf2-e25fa5adfde5",
+                "Id" : "bb8619fd-e815-4f17-aab4-36d63d52db12",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Water",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "CageService",
+                "SourceSection" : "DynamicThingTemplates_CageTemplate",
+                "TargetArea" : "UI",
+                "TargetId" : "textbox-10",
+                "TargetSection" : ""
+              }, {
+                "Id" : "d9bcf67b-9428-4e8c-a30b-69d960af41f1",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Food",
+                  "SourcePropertyBaseType" : "NUMBER",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "CageService",
+                "SourceSection" : "DynamicThingTemplates_CageTemplate",
+                "TargetArea" : "UI",
+                "TargetId" : "textbox-24",
+                "TargetSection" : ""
+              }, {
+                "Id" : "3afb0f4a-e6bb-44b4-94e7-1810256ad84a",
                 "PropertyMaps" : [ {
                   "SourceProperty" : "Text",
                   "SourcePropertyBaseType" : "STRING",
                   "TargetProperty" : "Water",
-                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyBaseType" : "NUMBER",
                   "TargetPropertyType" : "Parameter"
                 } ],
                 "SourceArea" : "UI",
@@ -259,16 +293,16 @@
                 "TargetId" : "AddParameters",
                 "TargetSection" : "DynamicThingTemplates_CageTemplate"
               }, {
-                "Id" : "dee901b4-777a-4339-8d12-bcd8dbabea56",
+                "Id" : "3c3752b5-9fc9-442f-a695-e31bd4240ea4",
                 "PropertyMaps" : [ {
-                  "SourceProperty" : "State",
-                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
                   "TargetProperty" : "Food",
-                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyBaseType" : "NUMBER",
                   "TargetPropertyType" : "Parameter"
                 } ],
                 "SourceArea" : "UI",
-                "SourceId" : "checkbox-23",
+                "SourceId" : "textbox-24",
                 "SourceSection" : "",
                 "TargetArea" : "Data",
                 "TargetId" : "AddParameters",
@@ -326,6 +360,15 @@
                 "EventTriggerId" : "autorefresh-22",
                 "EventTriggerSection" : "",
                 "Id" : "a0b4c310-0707-41ff-8d76-6acacc5c9b5f"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "ThingTemplates_CageTemplate",
+                "EventHandlerService" : "GetImplementingThingsWithData",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "PopupClosed",
+                "EventTriggerId" : "navigation-26",
+                "EventTriggerSection" : "",
+                "Id" : "aa661a00-f15e-4e0c-b0fa-0f79018a569b"
               } ],
               "RunTimePermissions" : {
                 "permissions" : [ ]
@@ -362,7 +405,7 @@
                   "Width" : 1024,
                   "Z-index" : 10,
                   "__TypeDisplayName" : "Mashup",
-                  "id_index" : 23,
+                  "id_index" : 26,
                   "supportsAutoResize" : true
                 },
                 "Widgets" : [ {
@@ -519,6 +562,28 @@
                           }, {
                             "Align" : "left",
                             "AllowEdit" : false,
+                            "FieldName" : "Food",
+                            "FormatOptions" : {
+                              "FormatString" : "0.00",
+                              "formatInfo" : {
+                                "FieldName" : "",
+                                "StateDefinition" : "",
+                                "StateDefinitionType" : "fixed",
+                                "StateFormats" : [ {
+                                  "state" : "",
+                                  "stateName" : "fixed"
+                                } ]
+                              },
+                              "renderer" : "NUMBER",
+                              "roundingEnabled" : true
+                            },
+                            "Title" : "Food",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          }, {
+                            "Align" : "left",
+                            "AllowEdit" : false,
                             "FieldName" : "Clean",
                             "FormatOptions" : {
                               "FormatString" : "checkbox",
@@ -535,28 +600,6 @@
                               "roundingEnabled" : true
                             },
                             "Title" : "Clean",
-                            "ValidationExpression" : "",
-                            "ValidationMessage" : "",
-                            "Width" : "auto"
-                          }, {
-                            "Align" : "left",
-                            "AllowEdit" : false,
-                            "FieldName" : "Food",
-                            "FormatOptions" : {
-                              "FormatString" : "checkbox",
-                              "formatInfo" : {
-                                "FieldName" : "",
-                                "StateDefinition" : "",
-                                "StateDefinitionType" : "fixed",
-                                "StateFormats" : [ {
-                                  "state" : "",
-                                  "stateName" : "fixed"
-                                } ]
-                              },
-                              "renderer" : "BOOLEAN",
-                              "roundingEnabled" : true
-                            },
-                            "Title" : "Food",
                             "ValidationExpression" : "",
                             "ValidationMessage" : "",
                             "Width" : "auto"
@@ -656,7 +699,7 @@
                           "InnerShadow" : true,
                           "Label" : "Temperature",
                           "LabelAlignment" : "left",
-                          "Left" : 100,
+                          "Left" : 630.2153015136719,
                           "MaskInputCharacters" : false,
                           "PlaceholderText" : "",
                           "ReadOnly" : false,
@@ -669,7 +712,7 @@
                           "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
                           "ToolTipField" : "",
                           "ToolTipStyle" : "DefaultTooltipStyle",
-                          "Top" : 95,
+                          "Top" : 0.21527099609375,
                           "Type" : "textbox",
                           "Visible" : true,
                           "Width" : 75,
@@ -690,7 +733,7 @@
                           "InnerShadow" : true,
                           "Label" : "Humidity",
                           "LabelAlignment" : "left",
-                          "Left" : 5,
+                          "Left" : 530.1111145019531,
                           "MaskInputCharacters" : false,
                           "PlaceholderText" : "",
                           "ReadOnly" : false,
@@ -703,7 +746,7 @@
                           "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
                           "ToolTipField" : "",
                           "ToolTipStyle" : "DefaultTooltipStyle",
-                          "Top" : 95,
+                          "Top" : 0.111114501953125,
                           "Type" : "textbox",
                           "Visible" : true,
                           "Width" : 95,
@@ -724,7 +767,7 @@
                           "InnerShadow" : true,
                           "Label" : "Water",
                           "LabelAlignment" : "left",
-                          "Left" : 180,
+                          "Left" : 710.1111145019531,
                           "MaskInputCharacters" : false,
                           "PlaceholderText" : "",
                           "ReadOnly" : false,
@@ -737,7 +780,7 @@
                           "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
                           "ToolTipField" : "",
                           "ToolTipStyle" : "DefaultTooltipStyle",
-                          "Top" : 95,
+                          "Top" : 0.111114501953125,
                           "Type" : "textbox",
                           "Visible" : true,
                           "Width" : 85,
@@ -768,7 +811,7 @@
                           "IconAlignment" : "left",
                           "Id" : "button-11",
                           "Label" : "Save",
-                          "Left" : 0.111114501953125,
+                          "Left" : 710.3194580078125,
                           "ResponsiveLayout" : false,
                           "RoundedCorners" : true,
                           "ShowDataLoading" : true,
@@ -776,7 +819,7 @@
                           "TabSequence" : 0,
                           "ToolTipField" : "",
                           "ToolTipStyle" : "DefaultTooltipStyle",
-                          "Top" : 170.11111450195312,
+                          "Top" : 55.3194580078125,
                           "Type" : "button",
                           "Visible" : true,
                           "Width" : 75,
@@ -795,7 +838,7 @@
                           "FocusStyle" : "DefaultFocusStyle",
                           "Height" : 20,
                           "Id" : "checkbox-12",
-                          "Left" : 180.11111450195312,
+                          "Left" : 905.3194885253906,
                           "Prompt" : "Clean",
                           "ResponsiveLayout" : false,
                           "ShowDataLoading" : true,
@@ -804,7 +847,7 @@
                           "TabSequence" : 0,
                           "ToolTipField" : "",
                           "ToolTipStyle" : "DefaultTooltipStyle",
-                          "Top" : 150.11111450195312,
+                          "Top" : 20.3194580078125,
                           "Type" : "checkbox",
                           "Visible" : true,
                           "Width" : 120,
@@ -826,7 +869,7 @@
                           "IconAlignment" : "left",
                           "Id" : "autorefresh-22",
                           "Label" : "Refresh Now",
-                          "Left" : 10,
+                          "Left" : 10.111114501953125,
                           "RefreshInterval" : 30,
                           "RefreshNowTabSequence" : 0,
                           "RefreshToggleLabel" : "On",
@@ -838,7 +881,7 @@
                           "ShowControls" : true,
                           "ShowDataLoading" : true,
                           "Style" : "DefaultButtonStyle",
-                          "Top" : 10,
+                          "Top" : 5.111114501953125,
                           "Type" : "autorefresh",
                           "Visible" : true,
                           "Width" : 180,
@@ -849,28 +892,128 @@
                       }, {
                         "Properties" : {
                           "Area" : "UI",
-                          "CustomClass" : "",
-                          "Description" : "",
-                          "Disabled" : false,
-                          "DisplayName" : "checkbox-23",
-                          "FocusStyle" : "DefaultFocusStyle",
-                          "Height" : 20,
-                          "Id" : "checkbox-23",
-                          "Left" : 180.11111450195312,
-                          "Prompt" : "Food",
+                          "CursorPosition" : 0,
+                          "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                          "DisplayName" : "textbox-24",
+                          "Height" : 24,
+                          "Id" : "textbox-24",
+                          "InnerShadow" : true,
+                          "Label" : "Food",
+                          "LabelAlignment" : "left",
+                          "Left" : 800.2153015136719,
+                          "MaskInputCharacters" : false,
+                          "PlaceholderText" : "",
+                          "ReadOnly" : false,
                           "ResponsiveLayout" : false,
                           "ShowDataLoading" : true,
-                          "State" : false,
-                          "Style" : "DefaultCheckboxStyle",
+                          "Style" : "DefaultTextBoxStyle",
                           "TabSequence" : 0,
+                          "Text" : "",
+                          "TextAlign" : "left",
+                          "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
                           "ToolTipField" : "",
                           "ToolTipStyle" : "DefaultTooltipStyle",
-                          "Top" : 175.11111450195312,
-                          "Type" : "checkbox",
+                          "Top" : 0.21527099609375,
+                          "Type" : "textbox",
                           "Visible" : true,
-                          "Width" : 120,
+                          "Width" : 85,
                           "Z-index" : 10,
-                          "__TypeDisplayName" : "Checkbox",
+                          "__TypeDisplayName" : "TextBox",
+                          "__supportsLabel" : true,
+                          "__supportsTooltip" : true
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Alignment" : "left",
+                          "Area" : "UI",
+                          "ClickOutsideToClose" : false,
+                          "DisplayName" : "navigation-25",
+                          "FixedPopupHeight" : 0,
+                          "FixedPopupWidth" : 0,
+                          "Height" : 30,
+                          "IconAlignment" : "left",
+                          "Id" : "navigation-25",
+                          "Left" : 10.52777099609375,
+                          "MashupName" : "StoragesMashup",
+                          "MashupParameters" : [ ],
+                          "MessageToShow" : "Mashup must be selected",
+                          "ModalPopupOpacity" : 0.5,
+                          "NavigationActiveStyle" : "DefaultNavigationActiveStyle",
+                          "NavigationFocusStyle" : "DefaultNavigationFocusStyle",
+                          "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+                          "PopupScrolling" : "auto",
+                          "PopupTitle" : "",
+                          "PopupTitleStyle" : "DefaultPopupTitleStyle",
+                          "ReloadOnReplace" : false,
+                          "ResponsiveLayout" : false,
+                          "RoundedCorners" : true,
+                          "ShowCloseButton" : true,
+                          "ShowDataLoading" : true,
+                          "ShowMessageIfNoMashup" : false,
+                          "Style" : "DefaultNavigationStyle",
+                          "TabSequence" : 0,
+                          "TargetWindow" : "new",
+                          "Text" : "Show Storages",
+                          "ToolTipField" : "",
+                          "ToolTipStyle" : "DefaultTooltipStyle",
+                          "Top" : 45.52777099609375,
+                          "Transparent" : false,
+                          "Type" : "navigation",
+                          "Visible" : true,
+                          "Width" : 105,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Navigation",
+                          "__supportsTooltip" : true
+                        },
+                        "Widgets" : [ ]
+                      }, {
+                        "Properties" : {
+                          "Alignment" : "left",
+                          "Area" : "UI",
+                          "ClickOutsideToClose" : false,
+                          "CustomClass" : "",
+                          "DisplayName" : "navigation-26",
+                          "FixedPopupHeight" : 0,
+                          "FixedPopupWidth" : 0,
+                          "Height" : 30,
+                          "IconAlignment" : "left",
+                          "Id" : "navigation-26",
+                          "Left" : 200.42361450195312,
+                          "MashupName" : "NewCageMashup",
+                          "MashupParameters" : [ {
+                            "BaseType" : "THINGNAME",
+                            "Description" : "Entity For Mashup",
+                            "ParameterName" : "Entity",
+                            "ParmDef" : { }
+                          } ],
+                          "MessageToShow" : "Mashup must be selected",
+                          "ModalPopupOpacity" : 0.5,
+                          "NavigationActiveStyle" : "DefaultNavigationActiveStyle",
+                          "NavigationFocusStyle" : "DefaultNavigationFocusStyle",
+                          "NavigationHoverStyle" : "DefaultNavigationHoverStyle",
+                          "PopupScrolling" : "visible",
+                          "PopupTitle" : "Add new Cage",
+                          "PopupTitleStyle" : "DefaultPopupTitleStyle",
+                          "ReloadOnReplace" : false,
+                          "ResponsiveLayout" : false,
+                          "RoundedCorners" : true,
+                          "ShowCloseButton" : true,
+                          "ShowDataLoading" : true,
+                          "ShowMessageIfNoMashup" : false,
+                          "Style" : "DefaultNavigationStyle",
+                          "TabSequence" : 0,
+                          "TargetWindow" : "modal-popup",
+                          "Text" : "Add New Cage",
+                          "ToolTipField" : "",
+                          "ToolTipStyle" : "DefaultTooltipStyle",
+                          "Top" : 5.423614501953125,
+                          "Transparent" : false,
+                          "Type" : "navigation",
+                          "Visible" : true,
+                          "Width" : 110,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Navigation",
                           "__supportsTooltip" : true
                         },
                         "Widgets" : [ ]
