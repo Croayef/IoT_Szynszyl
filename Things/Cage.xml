@@ -11,11 +11,11 @@
         <Thing
          description=""
          documentationContent=""
-         effectiveThingPackage="ConfiguredThing"
+         effectiveThingPackage="RemoteThing"
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2019-01-27T17:01:59.179+01:00"
+         lastModifiedDate="2019-01-27T16:09:14.668-08:00"
          name="Cage"
          projectName="Chinchillas"
          published="false"
@@ -50,7 +50,13 @@
             <RemoteEventBindings></RemoteEventBindings>
             <AlertConfigurations></AlertConfigurations>
             <ImplementedShapes></ImplementedShapes>
-            <ThingProperties></ThingProperties>
+            <ThingProperties>
+                <lastConnection>
+                    <Value>2019-01-28T06:17:43.086-08:00</Value>
+                    <Timestamp>2019-01-28T06:17:43.086-08:00</Timestamp>
+                    <Quality>GOOD</Quality>
+                </lastConnection>
+            </ThingProperties>
         </Thing>
     </Things>
 </Entities>

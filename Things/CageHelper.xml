@@ -15,7 +15,7 @@
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2019-01-28T00:28:26.318+01:00"
+         lastModifiedDate="2019-01-28T05:36:57.489-08:00"
          name="CageHelper"
          projectName="Chinchillas"
          published="false"
@@ -57,6 +57,11 @@
                             <FieldDefinition
                              baseType="STRING"
                              description=""
+                             name="Description"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description=""
                              name="ThingName"
                              ordinal="1"></FieldDefinition>
                         </ParameterDefinitions>
@@ -91,7 +96,7 @@
                                         if(Things[ThingName] == undefined){
                                         var params = {
                                          name: ThingName,
-                                         description: undefined,
+                                         description: Description,
                                          thingTemplateName: "CageTemplate",
                                          tags: undefined 
                                         };
@@ -99,6 +104,9 @@
                                         Resources["EntityServices"].CreateThing(params);
                                         Things[ThingName].EnableThing();
                                         Things[ThingName].RestartThing();
+                                        Things[ThingName].SetProjectName({
+                                            projectName: "Chinchillas"
+                                        });
                                         }
                                         ]]>
                                         </code>

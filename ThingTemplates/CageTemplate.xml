@@ -14,7 +14,7 @@
          documentationContent=""
          effectiveThingPackage="RemoteThing"
          homeMashup=""
-         lastModifiedDate="2019-01-28T00:37:08.341+01:00"
+         lastModifiedDate="2019-01-28T08:14:12.369-08:00"
          name="CageTemplate"
          projectName="Chinchillas"
          tags="Chinchillas:Cage"
@@ -55,6 +55,26 @@
                  pushThreshold="0.0"
                  pushType="VALUE"
                  sourceName="Food"
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.source=""
+                 aspect.startType="useDefaultValue"
+                 aspect.tagAddress=""
+                 foldType="NONE"
+                 name="Humidity"
+                 pushThreshold="0.0"
+                 pushType="ALWAYS"
+                 sourceName="Humidity"
+                 timeout="0"></RemotePropertyBinding>
+                <RemotePropertyBinding
+                 aspect.source=""
+                 aspect.startType="useDefaultValue"
+                 aspect.tagAddress=""
+                 foldType="NONE"
+                 name="Temperature"
+                 pushThreshold="0.0"
+                 pushType="ALWAYS"
+                 sourceName="Temperature"
                  timeout="0"></RemotePropertyBinding>
                 <RemotePropertyBinding
                  aspect.source=""
@@ -347,44 +367,6 @@
                                             <code>
                                             <![CDATA[
                                             if( me.Clean === false) me.Clean = true;
-                                            ]]>
-                                            </code>
-                                        </Row>
-                                    </Rows>
-                                </ConfigurationTable>
-                            </ConfigurationTables>
-                        </ServiceImplementation>
-                    </Subscription>
-                    <Subscription
-                     enabled="true"
-                     eventName="Timer"
-                     source="MessTimer"
-                     sourceProperty=""
-                     sourceType="Thing">
-                        <ServiceImplementation
-                         description=""
-                         handlerName="Script"
-                         name="Type.Thing:Entity.MessTimer:Event.Timer">
-                            <ConfigurationTables>
-                                <ConfigurationTable
-                                 description=""
-                                 isMultiRow="false"
-                                 name="Script"
-                                 ordinal="0">
-                                    <DataShape>
-                                        <FieldDefinitions>
-                                            <FieldDefinition
-                                             baseType="STRING"
-                                             description="code"
-                                             name="code"
-                                             ordinal="0"></FieldDefinition>
-                                        </FieldDefinitions>
-                                    </DataShape>
-                                    <Rows>
-                                        <Row>
-                                            <code>
-                                            <![CDATA[
-                                            me.Clean = false;
                                             ]]>
                                             </code>
                                         </Row>

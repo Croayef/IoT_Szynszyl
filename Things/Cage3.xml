@@ -9,17 +9,18 @@
  universal="">
     <Things>
         <Thing
+         aspect.isSystemObject="false"
          description=""
          documentationContent=""
          effectiveThingPackage="RemoteThing"
          enabled="true"
          homeMashup=""
          identifier=""
-         lastModifiedDate="2019-01-27T16:09:14.684-08:00"
-         name="Cage2"
+         lastModifiedDate="2019-01-28T06:04:21.914-08:00"
+         name="Cage3"
          projectName="Chinchillas"
          published="false"
-         tags="Chinchillas:Cage"
+         tags=""
          thingTemplate="CageTemplate"
          valueStream="">
             <avatar></avatar>
@@ -52,8 +53,8 @@
             <ImplementedShapes></ImplementedShapes>
             <ThingProperties>
                 <lastConnection>
-                    <Value>2019-01-28T06:17:43.086-08:00</Value>
-                    <Timestamp>2019-01-28T06:17:43.086-08:00</Timestamp>
+                    <Value>2019-01-28T06:17:43.102-08:00</Value>
+                    <Timestamp>2019-01-28T06:17:43.102-08:00</Timestamp>
                     <Quality>GOOD</Quality>
                 </lastConnection>
             </ThingProperties>
